@@ -78,20 +78,24 @@ while True:
     print("\n\n")
     typing("\nDo you really want to play KBC? : ",0.05)
     play = input("")
-    if play != "yes":
-        print("\nEnter a Valid Answer (yes/no) : ")
-    else:
+    if play == "no":
+       print("Aaya kyu fir?")
+       quit()
+    elif play == "yes":
         confirmsound.play()
         typing("\nAre you sure that you're smart enough to play KBC? : ",0.03)
         play2 = input("")
         if play2 == "no":
              print("\nAagya na line pe! Bhag yaha se...")
+             quit()
         elif play2 != "yes":
             print("\nEnter a Valid Answer (yes/no)")
         else:
             fullintro.play()
             typing("\n\nFine then! LET'S PLAY KAUN BANEGA CROREPATI",0.05)
             break   
+    else:
+         print("\nEnter a Valid Answer (yes/no) : ")
 def play():
     amount = 0
     typing("\nToh yeh raha pehela prashn 1000 Rupyo ke liye aapki screen par!",0.05)
@@ -433,4 +437,4 @@ def game():
             print("Please enter a valid answer.")        
 game()
     
- 
+  
